@@ -255,13 +255,13 @@ function drawFront() {
   ctx.drawImage(frontBackground, 0, 0, CARD_WIDTH, CARD_HEIGHT);
 
   if (state.photo) {
-    drawCoverImage(ctx, state.photo, 80, 777, 241, 321);
+    drawCoverImage(ctx, state.photo, 87, 785, 226, 301);
   }
 
   drawDataValue(ctx, data.name, 80, 724, 670);
   drawDataValue(ctx, data.examNumber, 365, 827, 410);
-  drawDataValue(ctx, data.admissionDate, 365, 925, 410);
-  drawDataValue(ctx, data.dob, 365, 1028, 410);
+  drawDataValue(ctx, data.admissionDate, 365, 895, 410);
+  drawDataValue(ctx, data.dob, 365, 996, 410);
 }
 
 function drawBack() {

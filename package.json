@@ -1,0 +1,20 @@
+{
+  "name": "piriven-student-id-system",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "jsbarcode": "^3.12.1",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^5.4.624"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

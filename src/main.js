@@ -242,10 +242,10 @@ function compressPhoto(image) {
   return canvas.toDataURL('image/jpeg', .82);
 }
 
-function drawDataValue(ctx, value, y) {
+function drawDataValue(ctx, value, x, y, maxWidth = 430) {
   ctx.fillStyle = '#24103c';
-  fitText(ctx, value, 430, 32, 650);
-  ctx.fillText(value, 365, y - 10);
+  fitText(ctx, value, maxWidth, 40, 700);
+  ctx.fillText(value, x, y - 12);
 }
 
 function drawFront() {
@@ -255,13 +255,13 @@ function drawFront() {
   ctx.drawImage(frontBackground, 0, 0, CARD_WIDTH, CARD_HEIGHT);
 
   if (state.photo) {
-    drawCoverImage(ctx, state.photo, 85, 765, 237, 316);
+    drawCoverImage(ctx, state.photo, 80, 777, 241, 321);
   }
 
-  drawDataValue(ctx, data.name, 825);
-  drawDataValue(ctx, data.examNumber, 915);
-  drawDataValue(ctx, data.admissionDate, 1004);
-  drawDataValue(ctx, data.dob, 1094);
+  drawDataValue(ctx, data.name, 80, 724, 670);
+  drawDataValue(ctx, data.examNumber, 365, 827, 410);
+  drawDataValue(ctx, data.admissionDate, 365, 925, 410);
+  drawDataValue(ctx, data.dob, 365, 1028, 410);
 }
 
 function drawBack() {

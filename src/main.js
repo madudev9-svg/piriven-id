@@ -260,8 +260,8 @@ function drawFront() {
 
   drawDataValue(ctx, data.name, 80, 724, 670);
   drawDataValue(ctx, data.examNumber, 365, 827, 410);
-  drawDataValue(ctx, data.admissionDate, 365, 895, 410);
-  drawDataValue(ctx, data.dob, 365, 996, 410);
+  drawDataValue(ctx, data.admissionDate, 365, 922, 410);
+  drawDataValue(ctx, data.dob, 365, 1023, 410);
 }
 
 function drawBack() {

@@ -244,8 +244,8 @@ function compressPhoto(image) {
 
 function drawDataValue(ctx, value, y) {
   ctx.fillStyle = '#24103c';
-  fitText(ctx, value, 400, 25, 600);
-  ctx.fillText(value, 365, y - 7);
+  fitText(ctx, value, 430, 32, 650);
+  ctx.fillText(value, 365, y - 10);
 }
 
 function drawFront() {

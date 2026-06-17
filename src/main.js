@@ -13,6 +13,7 @@ const MM_WIDTH = 53.34;
 const MM_HEIGHT = 83.82;
 const STORAGE_KEY = 'piriven-id-records-v1';
 const SEQUENCE_KEY = 'piriven-id-sequence-v1';
+const STUDENT_NUMBER_PREFIX = '402009';
 
 const state = {
   photo: null,
@@ -184,8 +185,7 @@ function getNextStudentNumber(forceIncrement = false) {
     sequence += 1;
     localStorage.setItem(SEQUENCE_KEY, String(sequence));
   }
-  const year = new Date().getFullYear();
-  return `PIR/ABP/${year}/${String(sequence).padStart(4, '0')}`;
+  return `${STUDENT_NUMBER_PREFIX}/${String(sequence).padStart(4, '0')}`;
 }
 
 function formData() {
@@ -450,7 +450,7 @@ function createImportedRecord(row) {
   let generatedNumber = '';
   if (!row.studentNumber && !row.number && !row['ශිෂ්‍ය අංකය']) {
     const sequence = Number(localStorage.getItem(SEQUENCE_KEY) || 1);
-    generatedNumber = `PIR/ABP/${new Date().getFullYear()}/${String(sequence).padStart(4, '0')}`;
+    generatedNumber = `${STUDENT_NUMBER_PREFIX}/${String(sequence).padStart(4, '0')}`;
     localStorage.setItem(SEQUENCE_KEY, String(sequence + 1));
   }
   const number = String(row.studentNumber || row.number || row['ශිෂ්‍ය අංකය'] || generatedNumber).trim();
